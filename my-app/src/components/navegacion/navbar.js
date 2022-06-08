@@ -19,13 +19,16 @@ const navbar = () => {
                             <Link className="nav-link active" aria-current="page" to='/'>Home</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to='./paginas/inicio'>inicio</Link>
+                            <Link className="nav-link" to='./inicio'>inicio</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to='./paginas/nosotros'>nosotros</Link>
+                            <Link className="nav-link" to='/nosotros'>nosotros</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to='tienda'>tienda</Link>
+                            <Link className="nav-link" to='/tienda'>tienda</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to='/itemcount'>ItemCount</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to='../paginas/ItemListContainer'>
