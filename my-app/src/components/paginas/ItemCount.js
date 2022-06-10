@@ -10,6 +10,8 @@ const ItemCount = (ItemCount) => {
         <button onClick={() => {setContador( contador + 1)}}>+</button>
         <button>Agregar al carrito</button>
     </div>
+
+   
 }
 
 export default ItemCount
