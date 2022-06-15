@@ -17,7 +17,7 @@ function App() {
             <Route path='/inicio' element={<Inicio />} />
             <Route path='/nosotros' element= {<Nosotros />}/>
             <Route path='/tienda' element= {<Tienda />}/>
-            <Route path='/ItemCount' element= {<ItemCount />}/>
+            <Route path='/ItemCount' element= {<ItemCount stock = {15} initial = {1}/>}/>
             <Route path='/ItemListContainer' element={<ItemListContainer />}/>
           </Routes>
         </Router>

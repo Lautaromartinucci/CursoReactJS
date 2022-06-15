@@ -20,6 +20,7 @@ const ItemListContainer =() => {
   console.log(productos)
 
   return (
+
     <div>
       {productos.map(producto=> <li key={producto.id}> {producto.nombre}</li> ) }
     </div>
