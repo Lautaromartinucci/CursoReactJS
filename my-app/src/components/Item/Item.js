@@ -5,17 +5,17 @@ const Item = ({prod}) => {
         <div            
             className='col-md-4 p-1'                                                           
         >                    
-            <div className="card w-100 mt-5" >
-                <div className="card-header">
+            <div className="card w-100 mt-5 border-dark" >
+                <div className="card-header text-white bg-dark border-dark">
                     {`${prod.nombre}`}
                 </div>
-                <div className="card-body">
+                <div className="card-body border-dark">
                     <img src={prod.foto} alt='' className='w-50' />
                     {prod.stock}                                                            
                 </div>
-                <div className="card-footer"> 
+                <div className="card-footer text-white bg-dark border-dark"> 
                     <Link to={`/camperones/${prod.id}`} >
-                        <button className="btn btn-outline-primary btn-block">
+                        <button className="btn btn-light text-white bg-dark  btn-block">
                             Ver más
                         </button>   
                     </Link> 

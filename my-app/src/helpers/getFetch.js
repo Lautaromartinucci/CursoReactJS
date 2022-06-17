@@ -3,7 +3,8 @@ let productos=[
 {
     id:'1',
     nombre:'Camperon Over',
-    descripcion:'Camperon Negro con capucha y piel desmontable y bolsillos',
+    desc:'Camperon Negro con capucha y piel desmontable y bolsillos',
+    precio: '$10000',
     foto: 'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQSbzOGdTFH15aG5zvYOO6yVIybmIVkv-0t5OwFQWvDK7GTDje5j8b2zGtzIjRgSSlnYmJyPdoP_JFF&usqp=CAc',
     
 },
@@ -11,7 +12,8 @@ let productos=[
 {
     id:'2',
     nombre:'Camperon Redlord',
-    descripcion:'Camperon Negro con capucha y piel desmontable y bolsillos',
+    desc:'Camperon Negro con capucha y piel desmontable y bolsillos',
+    precio: '$15000',
     foto: 'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSHSY2DPRz_H3wHehTORWRJRyo2s0hIcmsFxGHNVZ1aPXgyPKYg8ZMqk5UvaRvMSXEizcKd6Ibt44YX&usqp=CAc'
    
 },
@@ -19,7 +21,8 @@ let productos=[
 {
     id:'3',
     nombre:'Camperon Tumba',
-    descripcion:'Camperon Negro con capucha y piel desmontable y bolsillos',
+    desc:'Camperon Negro con capucha y piel desmontable y bolsillos',
+    precio: '$20000',
     foto: 'https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRyY75xI3JxDVlEkCcWIowqPKfT63lrHPAK9Uf2sIWGreoJ94vihOKZnIINTKwymx_80W9slHGn-Xy4&usqp=CAc'
     
 },
