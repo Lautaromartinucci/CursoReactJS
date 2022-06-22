@@ -24,7 +24,8 @@ function App() {
             <Route path='/tienda' element= {<Tienda />}/>
             <Route path='/ItemCount' element= {<ItemCount stock = {15} initial = {1}/>}/>
             <Route path='/ItemListContainer' element={<ItemListContainer />}/>
-            <Route path="/camperones/:id" element={<ItemDetailConatainer />} />                
+            <Route path="/camperones/:id" element={<ItemDetailConatainer />} />   
+                         
 
           </Routes>
         </Rutas>

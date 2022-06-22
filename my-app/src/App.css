@@ -82,19 +82,19 @@
     border: 1px solid black;
 }
  
-.reset {
+.agregar {
     width: 100px;
-    font-size: 18px;
-    padding: 10px 20px;
+    font-size: 20px;
+    padding: 10px 10px;
     background-color: transparent;
     color: black;
-    border: 1px solid white;
+    border: 1px solid rgb(0, 0, 0);
     cursor: pointer;
     transition: 0.2s ease-in-out;
 }
  
-.reset:hover {
+.agregar:hover {
     background-color: black;
-    color: white;
+    color: rgb(255, 255, 255);
     border: 1px solid black;
 }
