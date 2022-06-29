@@ -1,57 +1,70 @@
-import { React, useState, useContext } from "react"
-import { Link } from "react-router-dom"
-import ItemCount from "../ItemCount/ItemCount"
-import { CartContext } from "../Cart/CartContext"
+import {useState} from 'react'
+import { Table, Container, Alert, Button } from 'react-bootstrap'
+import ItemCount from '../ItemCount/ItemCount'
+import { LinkContainer } from 'react-router-bootstrap'
+import { Link } from 'react-router-dom'
+const ItemDetail = ({ data }) => {
+  
+  const [addedToCart, setAddedToCart] = useState(false)
+  
+  return (
+    <div>
+      <Container >
 
-function ItemDetail ({producto})  {
+        <h1 className="text-center mb-5 mt-5">Detalle del Producto</h1>
 
-    const [estado, setEstado] = useState()
-    const {AddToCart} = useContext(CartContext);
+        <div className="detail-content d-flex flex-column align-items-center m-3">
+          <div className="d-flex flex-column justify-content-center align-items-center mb-5 imagen">
+            <img src={data.img} alt={data.name} />
+          </div>
+          <div className="d-flex flex-column">
+            <Table className='mt-1' striped bordered hover variant="dark">
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Año</th>
+                  <th>Precio</th>
+                  <th>Genero</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{data.name}</td>
+                  <td>{data.year}</td>
+                  <td>{data.price}</td>
+                  <td>{data.genre}</td>
+                </tr>
+              </tbody>
+            </Table>
+            <Alert variant="dark">
+              <p>{data.description}</p>
+            </Alert>
+            { addedToCart ? <>
+              <Link className="btn btn-danger" to="/carrito"> Ir al Carrito </Link> 
+            </>
+              : 
+                          
+              <ItemCount data={data} onAdd={setAddedToCart}  max={5} min={1} />
+            
 
-    const onAdd = (cant) => {
-        AddToCart(producto, cant)
-        
-        
-        
+            }
+            
+            <div className="d-flex justify-content-center mt-3">
+              <LinkContainer to="/">
+                              <Button className="m-2 boton-mirando" variant="secondary">
+                                  Seguir Mirando
+                              </Button>
+              </LinkContainer>
+            </div> 
 
+          </div>
 
-        console.log(cant)
-        setEstado (cant)
-
-    } 
-    
-
-
-
-
-    return (
-        <div className="row">
-            <div className="col-md-6 mt-5">
-                <img src={producto.foto} alt="" className="w-50 m-5" />
-            </div>
-            <div className="col-md-6 mt-5"> 
-                <div className="row mt-5">
-                    <h2>Nombre: {producto.nombre}</h2>
-                    <h3>Descripción: {producto.desc} </h3>
-                    <h4>Precio: {producto.precio}</h4>
-                </div>               
-                <div className="row">
-                    <div className="col">
-                        {
-                            estado ?
-
-                            <Link to="/Cart">
-                            <button className="agregar">Ir al Carrito</button>
-                            </Link>
-
-                            :
-                            <ItemCount  initial={1} stock={10} onAdd={onAdd} />
-                        }                        
-                    </div>
-                </div>
-            </div>
         </div>
-    )
+        <div className="mb-5 mt-5 d-flex justify-content-center  align-items-center botones">
+        </div>
+      </Container>
+    </div>
+  )
 }
 
 export default ItemDetail

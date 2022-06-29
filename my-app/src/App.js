@@ -8,8 +8,9 @@ import Nosotros from './components/paginas/nosotros'
 import ItemListContainer from './containers/ItemListContainer'
 import ItemCount from './components/ItemCount/ItemCount'
 import ItemDetailConatainer from './components/ItemDetail/ItemDetailContainer'
-import CartContextProvider from './components/Cart/CartContext'
-import Cart from "./components/Cart/Cart"
+import {CartContextProvider} from './context/CartContext';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
@@ -26,11 +27,9 @@ function App() {
         <Route path='/tienda' element= {<Tienda />}/>
         <Route path='/ItemCount' element= {<ItemCount stock = {15} initial = {1}/>}/>
         <Route path='/ItemListContainer' element={<ItemListContainer />}/>
-        <Route path="/camperones/:id" element={<ItemDetailConatainer />} />   
-        <Route path="/Cart" element={<Cart />} />   
+        <Route path="/camperones/:id" element={<ItemDetailConatainer />} />     
 
-                          
-
+                        
       </Routes>
       </CartContextProvider>
     </Rutas>
