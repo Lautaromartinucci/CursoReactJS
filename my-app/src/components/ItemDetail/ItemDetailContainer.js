@@ -4,7 +4,7 @@ import ItemDetail from "./ItemDetail"
 import { collection, getDoc, getFirestore} from 'firebase/firestore'
 
 
-const ItemDetailConatainer = () => {
+const ItemDetailContainer = () => {
     const [producto, setProducto] = useState({})
     const { id } = useParams()
 
@@ -46,4 +46,4 @@ const ItemDetailConatainer = () => {
     )
 
 }
-export default ItemDetailConatainer
+export default ItemDetailContainer
